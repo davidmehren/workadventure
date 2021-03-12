@@ -57,6 +57,8 @@ services:
       JITSI_URL: $JITSI_URL
       JITSI_ISS: $JITSI_ISS
       MAX_PER_GROUP: $MAX_PER_GROUP
+    ports:
+      - 8081:8080
 
   uploader:
     restart: unless-stopped
