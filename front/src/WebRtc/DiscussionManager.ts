@@ -91,7 +91,7 @@ export class DiscussionManager {
         //append in main container
         this.mainContainer.appendChild(this.divDiscuss);
 
-        this.addParticipant('me', 'Moi', undefined, true);
+        this.addParticipant('me', 'Me', undefined, true);
     }
 
     public addParticipant(
