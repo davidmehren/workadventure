@@ -16,5 +16,5 @@
   "labels": [
     "type: maintenance"
   ],
-  "renovateFork": true
+  "includeForks": true
 }
