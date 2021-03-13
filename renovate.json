@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "config:base",
+    "group:definitelyTyped",
+    "group:socketio",
+    "group:linters",
+    "group:test",
+    ":gitSignOff",
+    ":prHourlyLimitNone",
+    ":dependencyDashboard",
+    ":maintainLockFilesWeekly"
+  ],
+  "baseBranches": [
+    "develop"
+  ],
+  "labels": [
+    "type: maintenance"
+  ]
+}
