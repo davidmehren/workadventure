@@ -67,7 +67,10 @@ module.exports = {
             'JITSI_PRIVATE_MODE',
             'START_ROOM_URL',
             'MAX_PER_GROUP'
-        ])
+        ]),
+        new webpack.DefinePlugin({
+            'process.env.IS_WEBPACK': true
+        })
     ],
 
 };
