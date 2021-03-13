@@ -55,7 +55,7 @@
     "systeminformation": "^4.31.1",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3",
-    "uWebSockets.js": "uNetworking/uWebSockets.js#v18.5.0",
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v18.14.0",
     "uuidv4": "^6.0.7"
   },
   "devDependencies": {
