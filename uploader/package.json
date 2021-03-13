@@ -45,7 +45,7 @@
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
     "mkdirp": "^1.0.4",
-    "prom-client": "^12.0.0",
+    "prom-client": "^13.0.0",
     "query-string": "^6.13.3",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3",
