@@ -15,5 +15,6 @@
   ],
   "labels": [
     "type: maintenance"
-  ]
+  ],
+  "renovateFork": true
 }
