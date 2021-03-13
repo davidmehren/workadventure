@@ -23,7 +23,7 @@ jobs:
       - uses: rlespinasse/github-slug-action@3.1.0
 
       - name: "Build and push front image"
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           dockerfile: front/Dockerfile
           path: ./
@@ -46,7 +46,7 @@ jobs:
       - uses: rlespinasse/github-slug-action@3.1.0
 
       - name: "Build and push back image"
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           dockerfile: back/Dockerfile
           path: ./
@@ -69,7 +69,7 @@ jobs:
       - uses: rlespinasse/github-slug-action@3.1.0
 
       - name: "Build and push back image"
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           dockerfile: pusher/Dockerfile
           path: ./
@@ -92,7 +92,7 @@ jobs:
       - uses: rlespinasse/github-slug-action@3.1.0
 
       - name: "Build and push back image"
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           dockerfile: uploader/Dockerfile
           path: ./
@@ -116,7 +116,7 @@ jobs:
       - uses: rlespinasse/github-slug-action@3.1.0
 
       - name: "Build and push front image"
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           dockerfile: maps/Dockerfile
           path: maps/
