@@ -1,11 +1,11 @@
 # protobuf build
-FROM node:14.15.4-buster-slim@sha256:cbae886186467bbfd274b82a234a1cdfbbd31201c2a6ee63a6893eefcf3c6e76 as builder
+FROM node:14.15.4-buster-slim@sha256:c8b73b9968457ee4969050955031efe0943d7770e38eeec2943debefd4d28cfd as builder
 WORKDIR /usr/src
 COPY messages .
 RUN yarn install && yarn proto
 
 # webpack build
-FROM node:14.15.4-buster-slim@sha256:cbae886186467bbfd274b82a234a1cdfbbd31201c2a6ee63a6893eefcf3c6e76 as builder2
+FROM node:14.15.4-buster-slim@sha256:c8b73b9968457ee4969050955031efe0943d7770e38eeec2943debefd4d28cfd as builder2
 WORKDIR /usr/src
 COPY front/yarn.lock front/package.json ./
 RUN yarn install
