@@ -1,0 +1,7 @@
+localhost:8008
+
+reverse_proxy * 127.0.0.1:8082
+reverse_proxy /room 127.0.0.1:8080
+reverse_proxy /verify 127.0.0.1:8080
+reverse_proxy /register 127.0.0.1:8080
+reverse_proxy /anonymLogin 127.0.0.1:8080

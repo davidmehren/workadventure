@@ -12,7 +12,6 @@ Work Adventure is a web-based collaborative workspace for small to medium teams 
 In Work Adventure, you can move around your office and talk to your colleagues (using a video-chat feature that is
 triggered when you move next to a colleague).
 
-
 ## Setting up a development environment
 
 Install Docker.
@@ -27,9 +26,12 @@ The environment will start.
 
 You should now be able to browse to http://workadventure.localhost/ and see the application.
 
+The Game UI can be found at http://play.workadventure.localhost/
+
 Note: on some OSes, you will need to add this line to your `/etc/hosts` file:
 
 **/etc/hosts**
+
 ```
 workadventure.localhost 127.0.0.1
 ```
@@ -40,8 +42,8 @@ If you are using MacOS, you can increase Docker performance using Vagrant. If yo
 
 #### Prerequisites
 
-- VirtualBox*	5.x	Latest version	https://www.virtualbox.org/wiki/Downloads
-- Vagrant	2.2.7	Latest version	https://www.vagrantup.com/downloads.html
+- VirtualBox\* 5.x Latest version https://www.virtualbox.org/wiki/Downloads
+- Vagrant 2.2.7 Latest version https://www.vagrantup.com/downloads.html
 
 #### First steps
 
@@ -68,7 +70,6 @@ Vagrant up
 
 To connect to your VM, run:
 
-
 ```bash
 Vagrant ssh
 ```
@@ -81,23 +82,23 @@ docker-compose up
 
 You environment runs in you VM Vagrant. When you want stop your VM, you can run:
 
-````bash
+```bash
 Vagrant halt
-````
+```
 
 If you want to destroy, you can run
 
-````bash
+```bash
 Vagrant destroy
-````
+```
 
 #### Available commands
 
-* `Vagrant up`: start your VM Vagrant.
-* `Vagrant reload`: reload your VM Vagrant when you change Vagrantfile.
-* `Vagrant ssh`: connect on your VM Vagrant.
-* `Vagrant halt`: stop your VM Vagrant.
-* `Vagrant destroy`: delete your VM Vagrant.
+- `Vagrant up`: start your VM Vagrant.
+- `Vagrant reload`: reload your VM Vagrant when you change Vagrantfile.
+- `Vagrant ssh`: connect on your VM Vagrant.
+- `Vagrant halt`: stop your VM Vagrant.
+- `Vagrant destroy`: delete your VM Vagrant.
 
 ## Setting up a production environment
 

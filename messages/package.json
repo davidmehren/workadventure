@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "proto": "grpc_tools_node_protoc --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts --grpc_out=generated --js_out=\"import_style=commonjs,binary:generated\" --ts_out=generated -I ./protos protos/*.proto",
+    "proto": "grpc_tools_node_protoc --grpc_out=grpc_js:./generated --js_out=\"import_style=commonjs,binary:./generated\" --ts_out=./generated -I ./protos protos/*.proto",
+    "proto-protobufjs": "yarn run proto && pbjs -t static-module -w commonjs -o generated/messages_pb.js protos/*.proto && pbts -o generated/messages_pb.d.ts generated/messages_pb.js",
+    "proto-grpc-generator": "proto-loader-gen-types --grpcLib=@grpc/grpc-js --includeComments -I ./protos/ -O ./generated/ protos/*.proto",
     "copy-to-back": "rm -rf ../back/src/Messages/generated && cp -rf generated/ ../back/src/Messages/generated",
     "copy-to-front": "rm -rf ../front/src/Messages/generated && cp -rf generated/ ../front/src/Messages/generated",
-    "copy-to-pusher": "rm -rf ../pusher/src/Messages/generated && cp -rf generated/ ../pusher/src/Messages/generated",
-    "proto-all": "yarn run proto && yarn run copy-to-back && yarn run copy-to-front && yarn run copy-to-pusher",
+    "copy-to-pusher": "rm -rf ../pusher/src/Messages/generated && cp -rf generated/ ../pusher/src/Messages/generated && cp -rf protos/ ../pusher/src/Messages/",
+    "proto-all": "yarn run proto-protobufjs && yarn run copy-to-back && yarn run copy-to-front && yarn run copy-to-pusher",
+    "proto-all-new": "yarn run proto-grpc-generator && yarn run copy-to-back && yarn run copy-to-front && yarn run copy-to-pusher",
     "proto:watch": "yarn run proto-all; inotifywait -q -m -e close_write protos/messages.proto | while read -r filename event; do yarn run proto-all; done"
   },
   "dependencies": {
+    "@grpc/proto-loader": "0.6.0-pre17",
     "google-protobuf": "^3.13.0",
-    "grpc": "^1.24.4"
+    "grpc": "^1.24.4",
+    "protobufjs": "^6.10.2"
   },
   "devDependencies": {
     "@types/google-protobuf": "^3.7.4",
@@ -26,7 +31,6 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "grpc-tools": "^1.9.1",
     "grpc_tools_node_protoc_ts": "^5.0.1",
-    "protobufjs": "^6.10.1",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.4",
     "typescript": "^4.0.5"

@@ -2,6 +2,8 @@ version: "3"
 services:
   reverse-proxy:
     image: traefik:v2.0
+    labels:
+      - "traefik.http.middlewares.testheader.headers.accesscontrolalloworigin=*"
     command:
       - --api.insecure=true
       - --providers.docker
@@ -153,7 +155,6 @@ services:
       - ./back:/usr/src/back
       - ./front:/usr/src/front
       - ./pusher:/usr/src/pusher
-
 #  coturn:
 #    image: coturn/coturn:4.5.2
 #    command:
