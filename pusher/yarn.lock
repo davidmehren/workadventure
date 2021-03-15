@@ -2154,9 +2154,9 @@ supports-color@^7.1.0:
     has-flag "^4.0.0"
 
 systeminformation@^4.31.1:
-  version "4.34.15"
-  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-4.34.15.tgz#dc8e4920b318881edd112a55ab7665b95d685bea"
-  integrity sha512-GRm0ntHg/MTISxZSu7r0T8reU1LLXUZxMcuDnqCcxIP0V+vjrt7SsiTWKrlsiL/DnThgUQHo1PT7VlZ5aKxdlQ==
+  version "4.34.16"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-4.34.16.tgz#ab4d03965c36fb3d22b4441b4af9c72b8071b585"
+  integrity sha512-nD7dyW0V7VXZlq8RrpFqqCtSKgj06rnVI/BTH+ABsWCKp1c4rTVMrQK7tSFlBIOpIXoudrEnDftS1e7t71dAAw==
 
 table@^5.2.3:
   version "5.4.6"
@@ -2315,6 +2315,7 @@ typescript@^3.8.3:
 
 uWebSockets.js@uNetworking/uWebSockets.js#v18.14.0:
   version "18.14.0"
+  uid b4bc740f46f1508c0f342b999db4d1f9dc80deab
   resolved "https://codeload.github.com/uNetworking/uWebSockets.js/tar.gz/b4bc740f46f1508c0f342b999db4d1f9dc80deab"
 
 unpipe@1.0.0:
