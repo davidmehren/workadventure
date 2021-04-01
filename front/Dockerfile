@@ -36,7 +36,7 @@ RUN API_URL=$API_URL UPLOADER_URL=$UPLOADER_URL ADMIN_URL=$ADMIN_URL START_ROOM_
     yarn run build
 
 # final production image
-FROM nginx:1.19.6-alpine@sha256:01747306a7247dbe928db991eab42e4002118bf636dd85b4ffea05dd907e5b66
+FROM nginx:1.19.9-alpine@sha256:d942e5263869b00ed3174fb76573165dc89e391bfafa43e9134a9c6e0bf0ec87
 COPY front/nginx-vhost.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder2 /usr/src/dist /usr/share/nginx/html
 
