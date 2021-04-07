@@ -54,7 +54,7 @@
     "query-string": "^6.13.3",
     "systeminformation": "^4.31.1",
     "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.8.3",
+    "typescript": "^4.0.0",
     "uWebSockets.js": "uNetworking/uWebSockets.js#v18.14.0",
     "uuidv4": "^6.0.7"
   },
